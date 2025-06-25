@@ -185,7 +185,7 @@ Metrik evaluasi untuk regresi:
 
 **Visualisasi**:  
 Plot pentingnya fitur Random Forest menunjukkan `number_inpatient` dan `discharge_disposition_id` sebagai faktor utama.  
-![Pentingnya Fitur Random Forest]![pentingnya_fitur_rf](![pentingnya_fitur_rf](https://github.com/user-attachments/assets/381b3dc0-49de-4c12-aee7-54e5337914a0)
+(![pentingnya_fitur_rf](https://github.com/Andriansyah2501/MachineLearnigTerapan01/blob/main/pentingnya_fitur_rf.png?raw=true)
 )
 
 
