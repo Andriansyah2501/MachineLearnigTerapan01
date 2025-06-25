@@ -199,28 +199,32 @@ Proyek ini telah memenuhi seluruh kriteria yang ditetapkan oleh Dicoding, termas
 
 Meskipun terdapat keterbatasan dalam performa model, pendekatan ini tetap memberikan fondasi yang solid untuk pengembangan sistem prediksi yang lebih akurat di masa mendatang melalui eksplorasi fitur tambahan dan pendekatan lanjutan.
 
-📌 Kelemahan & Saran
-Kelemahan:
+## ❗ Kelemahan Model
 
-Nilai R² rendah (0.1103)
+- 🔹 **Nilai R² yang rendah** (0.1103) menunjukkan bahwa model belum mampu menjelaskan variabilitas data secara optimal. Hal ini kemungkinan besar disebabkan oleh:
+  - Fitur yang kurang relevan atau belum cukup informatif,
+  - Tingginya **nilai hilang (missing values)** dan kemungkinan **noise** dalam data.
+  
+- 🔹 Penghapusan kolom penting seperti **`weight`** menyebabkan hilangnya potensi informasi klinis yang dapat mendukung prediksi.
 
-Penghapusan fitur weight menghilangkan potensi informasi penting
+---
 
-Saran Perbaikan:
+## 🛠️ Saran Perbaikan
 
-Tambahkan fitur interaksi (num_medications × insulin)
+- ➕ Tambahkan **fitur interaksi**, misalnya `num_medications × insulin`, untuk menangkap efek gabungan dari pengobatan terhadap risiko readmisi.
+- 🩻 Gunakan metode **imputasi** (median, regresi, atau KNN) untuk menangani **missing values** pada fitur seperti `weight`, alih-alih menghapusnya langsung.
+- 🧠 Lakukan eksperimen dengan model lanjutan seperti:
+  - **CatBoost** – unggul dalam menangani data kategorikal,
+  - **Stacking Ensemble** – menggabungkan kekuatan beberapa model untuk hasil prediksi yang lebih akurat.
 
-Lakukan imputasi pada missing values
+---
 
-Eksplorasi model lain: CatBoost, Stacking Ensemble
+## 💼 Dampak Bisnis
 
-💼 Dampak Bisnis
-Model ini dapat diintegrasikan ke sistem EHR (Electronic Health Record) rumah sakit untuk:
+- 🏥 Model dapat diintegrasikan ke dalam sistem **Electronic Health Record (EHR)** di rumah sakit.
+- 🔔 Memungkinkan **notifikasi otomatis** kepada tenaga medis terkait pasien dengan **risiko readmisi tinggi**.
+- 💰 Berpotensi **menurunkan biaya operasional** rumah sakit akibat readmisi yang tidak perlu.
+- 🩺 Membantu **meningkatkan kualitas layanan dan hasil perawatan pasien** melalui intervensi yang lebih tepat waktu dan berbasis data.
 
-Deteksi otomatis pasien berisiko tinggi readmisi
-
-Intervensi dini oleh tenaga medis
-
-Menurunkan biaya readmisi & meningkatkan outcome pasien
-
+---
 
